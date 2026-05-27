@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>La Manada - Hamburguesas Artesanales</title>
+    
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Sacia tu instinto con las hamburguesas artesanales de La Manada. Ingredientes premium, papas rústicas crujientes y un tamaño jurásico en Paine, Región Metropolitana." />
+    <meta name="keywords" content="hamburguesas, paine, la manada, comida rapida, delivery, artesanal, burgers, papas fritas" />
+    <meta name="author" content="La Manada Burger" />
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Google Fonts & Material Icons -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <!-- Tailwind Custom Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container": "#201f1f",
+                        "tertiary": "#99d7ff",
+                        "surface-variant": "#353534",
+                        "primary-container": "#f0a500",
+                        "surface-dim": "#131313",
+                        "on-secondary-container": "#3a2600",
+                        "surface-container-low": "#1c1b1b",
+                        "primary-fixed-dim": "#ffba44",
+                        "on-primary-fixed": "#281800",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-fixed-variant": "#614000",
+                        "surface-deep": "#0a0a0a",
+                        "on-secondary-fixed-variant": "#5f4100",
+                        "on-primary-container": "#5f3f00",
+                        "primary": "#ffc56c",
+                        "outline-variant": "#514533",
+                        "tertiary-fixed-dim": "#81cfff",
+                        "on-tertiary-container": "#004b69",
+                        "surface-bright": "#3a3939",
+                        "on-tertiary-fixed-variant": "#004c6b",
+                        "on-tertiary-fixed": "#001e2d",
+                        "on-secondary": "#422c00",
+                        "background": "#131313",
+                        "surface": "#131313",
+                        "secondary-fixed": "#ffdeab",
+                        "secondary": "#f8bc51",
+                        "on-background": "#e5e2e1",
+                        "surface-elevated": "#111111",
+                        "outline": "#9f8e79",
+                        "inverse-surface": "#e5e2e1",
+                        "error": "#ffb4ab",
+                        "on-tertiary": "#00344b",
+                        "secondary-fixed-dim": "#f8bc51",
+                        "tertiary-container": "#3abfff",
+                        "error-container": "#93000a",
+                        "on-surface-variant": "#d6c4ac",
+                        "on-secondary-fixed": "#281900",
+                        "on-error": "#690005",
+                        "primary-fixed": "#ffddaf",
+                        "text-primary": "#ffffff",
+                        "on-surface": "#e5e2e1",
+                        "text-secondary": "#848484",
+                        "accent-amber": "#EBB000",
+                        "surface-tint": "#ffba44",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container-highest": "#353534",
+                        "inverse-on-surface": "#313030",
+                        "tertiary-fixed": "#c6e7ff",
+                        "on-primary": "#442c00",
+                        "secondary-container": "#bc871f",
+                        "inverse-primary": "#805600"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
+                    },
+                    spacing: {
+                        "margin-mobile": "20px",
+                        "gutter": "16px",
+                        "base": "4px",
+                        "max-width": "1200px",
+                        "margin-desktop": "64px"
+                    },
+                    fontFamily: {
+                        "body-md": ["Inter"],
+                        "headline-md": ["Bebas Neue"],
+                        "headline-lg-mobile": ["Bebas Neue"],
+                        "caption": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Bebas Neue"],
+                        "label-bold": ["Inter"],
+                        "headline-xl": ["Bebas Neue"]
+                    },
+                    fontSize: {
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "headline-md": ["24px", { lineHeight: "28px", fontWeight: "400" }],
+                        "headline-lg-mobile": ["32px", { lineHeight: "36px", fontWeight: "400" }],
+                        "caption": ["12px", { lineHeight: "16px", fontWeight: "400" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "headline-lg": ["40px", { lineHeight: "44px", letterSpacing: "0.02em", fontWeight: "400" }],
+                        "label-bold": ["14px", { lineHeight: "20px", fontWeight: "700" }],
+                        "headline-xl": ["64px", { lineHeight: "60px", letterSpacing: "0.02em", fontWeight: "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Style System -->
+    <style>
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        .dino-pattern {
+            background-image: url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M54.627 0l.83.83v58.34h-58.34l-.83-.83V0h58.34zM27 30l-3.328-10.02L18.665 24 21 30h6z" fill="%23201f1f" fill-opacity="0.3" fill-rule="evenodd"/></svg>');
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #201f1f;
+            border-radius: 4px;
+            border: 2px solid #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f0a500;
+        }
+        
+        /* Floating animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-surface-deep text-on-surface font-body-md antialiased pb-24 md:pb-0 dino-pattern selection:bg-primary-container selection:text-surface-deep">
+
+    <!-- Top Navigation (Hidden on Mobile) -->
+    <header class="hidden md:flex fixed top-0 w-full z-50 justify-between items-center px-margin-desktop h-20 bg-[#0a0a0ade]/90 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-300">
+        <div class="flex items-center gap-6">
+            <a href="#inicio" class="font-headline-lg text-headline-lg text-primary hover:text-primary-container tracking-wider transition-colors duration-300">LA MANADA</a>
+            <nav class="flex gap-6 font-label-bold uppercase text-caption tracking-widest text-text-secondary">
+                <a href="#inicio" class="hover:text-primary transition-colors py-2">Inicio</a>
+                <a href="#menu" class="hover:text-primary transition-colors py-2">Nuestras Presas</a>
+                <a href="#tribu" class="hover:text-primary transition-colors py-2">La Tribu</a>
+                <a href="#cavernas" class="hover:text-primary transition-colors py-2">Cavernas</a>
+            </nav>
+        </div>
+        <div class="flex items-center gap-4">
+            <button onclick="toggleCart()" class="relative flex items-center justify-center p-3 rounded-full bg-surface-container border border-outline-variant/20 hover:bg-surface-container-high transition-colors duration-300 group">
+                <span class="material-symbols-outlined text-primary group-hover:text-primary-container transition-colors">shopping_bag</span>
+                <span id="cart-badge-desktop" class="absolute -top-1 -right-1 bg-primary-container text-surface-deep font-bold text-[10px] w-5 h-5 rounded-full flex items-center justify-center border border-[#0a0a0a] scale-0 transition-transform duration-300">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Header -->
+    <header class="md:hidden fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile h-16 bg-[#0a0a0ade]/95 backdrop-blur-md border-b border-outline-variant/30">
+        <div class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-wider">LA MANADA</div>
+        <button onclick="toggleCart()" class="relative flex items-center justify-center p-2 rounded-full bg-surface-container border border-outline-variant/10">
+            <span class="material-symbols-outlined text-primary">shopping_bag</span>
+            <span id="cart-badge-mobile" class="absolute -top-1 -right-1 bg-primary-container text-surface-deep font-bold text-[10px] w-5 h-5 rounded-full flex items-center justify-center border border-[#0a0a0a] scale-0 transition-transform duration-300">0</span>
+        </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative h-screen min-h-[650px] flex items-center justify-center pt-16 parallax" style="background-image: url('https://lh3.googleusercontent.com/aida/ADBb0uiVbnVmeJP8vPhk1PgtaIwZ-VqmigeBYsR4o2BzYaIJRxcXiB2PLf5JA7g-vQrUa-Drk5bUrT5-NOsVw9bI9YjNrYgJ4gH9BTYhJvb8dkZ1B-5TgNBDsiuVnhoCRS4d6VtjjVbb7A49beoz47z0wBGHbRbYsMgg6CPnDwyIeJwjiEd6lBIhFpLoqLpqHg3As2FKvakY_jBRcieN2unSwWPKW91CAA6w5dx-NK5hIYZGBIWUBwRVPP-Bh-_b');">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[#0a0a0a]"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center text-center px-margin-mobile max-w-3xl mx-auto mt-12 md:mt-0">
+            <img alt="La Manada Logo" class="w-40 h-40 md:w-48 md:h-48 mb-8 rounded-full shadow-[0_0_40px_rgba(240,165,0,0.4)] border-4 border-primary-container/40 animate-float" src="https://lh3.googleusercontent.com/aida/ADBb0uh7okVlMEZHN6px1NB8dDGg3ga_Uvqd8VefhuGNAAnm4lR0TxOx4gUULXSHlMGGoIp2UhbqIR8prodrJJxst4dw1xg6lmXBaY3Vs-WnlNN7pTgF7o8qudqYfcWC_yxXkvOo-2joD5Ex6WaYwOqWlN13tDegpY8H0oAR0SVCv4oAJ1hFXpdihFBD-ZNBKKNu0sOKM_1fISGQsS7wMPPzauwwOs7rUAMo0QhPCbXFtJv6rhXQpN9T3FKVFl11"/>
+            <h1 class="font-headline-xl text-headline-xl md:text-[80px] md:leading-[80px] text-text-primary uppercase mb-6 text-shadow tracking-wide leading-tight">
+                HAMBURGUESAS PARA UN VERDADERO CAVERNÍCOLA
+            </h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl mx-auto">
+                El sabor de la era jurásica ha despertado. Únete a la tribu y sacia tu instinto más salvaje en Paine.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-4 justify-center">
+                <a href="#menu" class="bg-primary-container hover:bg-accent-amber text-[#0a0a0a] font-headline-md text-headline-md px-12 py-4 rounded transition-all duration-300 hover:shadow-[0_0_25px_rgba(240,165,0,0.5)] hover:-translate-y-1 w-full sm:w-auto uppercase flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined font-bold">local_fire_department</span> CAZAR AHORA
+                </a>
+                <a href="#tribu" class="bg-transparent border-2 border-primary text-primary hover:bg-primary-container/10 font-headline-md text-headline-md px-12 py-4 rounded transition-all duration-300 w-full sm:w-auto uppercase flex items-center justify-center gap-2 hover:-translate-y-1">
+                    <span class="material-symbols-outlined font-bold">explore</span> VER LA CAVERNA
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Bar -->
+    <section class="bg-surface-elevated border-y border-outline-variant/30 py-8 px-margin-mobile relative overflow-hidden">
+        <div class="absolute -right-10 -top-10 opacity-5 rotate-45">
+            <span class="material-symbols-outlined text-[120px] text-primary">cruelty_free</span>
+        </div>
+        <div class="max-w-max-width mx-auto flex flex-col items-center gap-4">
+            <h3 class="font-headline-md text-headline-md text-primary tracking-widest uppercase mb-1">CAVERNÍCOLAS SATISFECHOS</h3>
+            <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-text-secondary font-caption text-caption uppercase tracking-wider w-full">
+                <div class="flex items-center gap-2 bg-surface-container-high px-5 py-2.5 rounded border border-outline-variant/20 hover:border-primary-container/30 transition-all duration-300">
+                    <span class="text-accent-amber text-lg">★</span> 
+                    <span class="font-label-bold text-on-surface">4.6 EN GOOGLE MAPS</span>
+                </div>
+                <div class="flex items-center gap-2 bg-surface-container-high px-5 py-2.5 rounded border border-outline-variant/20 hover:border-primary-container/30 transition-all duration-300">
+                    <span class="text-primary text-lg material-symbols-outlined">local_shipping</span> 
+                    <span class="font-label-bold text-on-surface">DELIVERY RÁPIDO EN PAINE</span>
+                </div>
+                <div class="flex items-center gap-2 bg-surface-container-high px-5 py-2.5 rounded border border-outline-variant/20 hover:border-primary-container/30 transition-all duration-300">
+                    <span class="text-primary text-lg material-symbols-outlined">restaurant</span> 
+                    <span class="font-label-bold text-on-surface">CONSUMO EN LOCAL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Menu Section -->
+    <section id="menu" class="py-20 px-margin-mobile bg-[#0a0a0a] relative z-10 border-b border-outline-variant/10">
+        <div class="max-w-max-width mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="font-headline-lg text-headline-lg text-primary uppercase tracking-widest">NUESTRAS PRESAS (MENÚ)</h2>
+                <p class="text-text-secondary mt-2 max-w-lg mx-auto">Filtra nuestro catálogo y selecciona la porción ideal para saciar tu apetito.</p>
+                <div class="w-16 h-1 bg-primary-container mx-auto mt-4 rounded"></div>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12 max-w-2xl mx-auto">
+                <button onclick="filterCategory('all')" id="btn-cat-all" class="cat-btn bg-primary-container text-surface-deep font-headline-md text-[18px] px-6 py-2.5 rounded transition-all duration-300 tracking-wider uppercase">TODAS</button>
+                <button onclick="filterCategory('burgers')" id="btn-cat-burgers" class="cat-btn bg-surface-container text-primary border border-outline-variant/30 hover:border-primary-container/50 font-headline-md text-[18px] px-6 py-2.5 rounded transition-all duration-300 tracking-wider uppercase">BURGERS</button>
+                <button onclick="filterCategory('sides')" id="btn-cat-sides" class="cat-btn bg-surface-container text-primary border border-outline-variant/30 hover:border-primary-container/50 font-headline-md text-[18px] px-6 py-2.5 rounded transition-all duration-300 tracking-wider uppercase">ACOMPAÑAMIENTOS</button>
+                <button onclick="filterCategory('drinks')" id="btn-cat-drinks" class="cat-btn bg-surface-container text-primary border border-outline-variant/30 hover:border-primary-container/50 font-headline-md text-[18px] px-6 py-2.5 rounded transition-all duration-300 tracking-wider uppercase">BEBIDAS</button>
+                <button onclick="filterCategory('combos')" id="btn-cat-combos" class="cat-btn bg-surface-container text-primary border border-outline-variant/30 hover:border-primary-container/50 font-headline-md text-[18px] px-6 py-2.5 rounded transition-all duration-300 tracking-wider uppercase">COMBOS JURÁSICOS</button>
+            </div>
+
+            <!-- Menu Grid Container -->
+            <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Dynamically Generated via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Tribe Section -->
+    <section id="tribu" class="py-20 px-margin-mobile bg-surface-container-low relative overflow-hidden border-b border-outline-variant/10">
+        <div class="max-w-max-width mx-auto flex flex-col lg:flex-row items-center gap-12 relative z-10">
+            <div class="w-full lg:w-1/2 flex justify-center">
+                <div class="relative group">
+                    <div class="absolute inset-0 rounded-lg bg-gradient-to-tr from-primary-container/40 to-transparent blur-xl transition-all duration-500 group-hover:blur-2xl"></div>
+                    <img alt="T-Rex Mascot" class="relative w-64 md:w-96 drop-shadow-[0_10px_30px_rgba(0,0,0,0.6)] transform transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0ugKxNKjBoWsCewVREOnIQD2SV5ECKBeVLC69D4ch9D0xj9_ght3wkGDP1D47423xcks9tfti4smFUQ3rwwWDtRRRbqihH91N7gdsYwhrPpy7APmo2iBOPp_7L2Jtl1WZZPOn35rNIVzMbfzqA88tt-QI4-Pv1EsArdcF7Pr9UqRKLdycIJtx24FZPe2ecX40u60w3SFMvPsjuky-RdnwhP51bQN4XE5TeRfgflHAqOmCG8DiOFnZVMQLCuy"/>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2 text-center lg:text-left">
+                <h2 class="font-headline-lg text-headline-lg text-primary uppercase tracking-widest mb-6">CONOCE A NUESTRA TRIBU</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
+                    En La Manada no cocinamos hamburguesas comunes. Preparamos presas premium que alimentan el instinto más puro y salvaje de la tribu. Carnes seleccionadas 100% de vacuno, pan artesanal súper esponjoso y salsas secretas de la caverna.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-on-surface font-label-bold mb-8 text-left max-w-md mx-auto lg:mx-0">
+                    <div class="flex items-center gap-3 bg-surface-container px-4 py-3 rounded border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-primary-container">check_circle</span>
+                        <span>100% Vacuno Seleccionado</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-surface-container px-4 py-3 rounded border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-primary-container">check_circle</span>
+                        <span>Pan Artesanal Diario</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-surface-container px-4 py-3 rounded border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-primary-container">check_circle</span>
+                        <span>Sabor a Fuego Directo</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-surface-container px-4 py-3 rounded border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-primary-container">check_circle</span>
+                        <span>Tamaños que Desafían</span>
+                    </div>
+                </div>
+                <a href="#menu" class="inline-block bg-primary-container text-surface-deep font-headline-md text-headline-md px-10 py-3.5 rounded hover:bg-accent-amber transition-all duration-300 uppercase tracking-widest shadow-[0_0_20px_rgba(240,165,0,0.3)] hover:-translate-y-0.5">
+                    VER CARTA COMPLETA
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="py-20 px-margin-mobile bg-surface-deep border-b border-outline-variant/10">
+        <div class="max-w-max-width mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="font-headline-lg text-headline-lg text-primary uppercase tracking-widest">RUGIDOS DE LA TRIBU</h2>
+                <p class="text-text-secondary mt-2">Lo que dicen los cavernícolas que han probado nuestras hamburguesas.</p>
+                <div class="w-16 h-1 bg-primary-container mx-auto mt-4 rounded"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Review Card 1 -->
+                <div class="bg-surface-container p-8 rounded border border-outline-variant/20 shadow-lg hover:border-primary-container/30 transition-all duration-300 hover:-translate-y-1">
+                    <div class="flex items-center gap-1 text-accent-amber mb-4">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    </div>
+                    <p class="font-body-md text-on-surface-variant italic mb-6 leading-relaxed">
+                        "¡Brutales! La T-Rex es una bestia. La mejor hamburguesa que he comido en Paine, literal para un dinosaurio. La carne es súper jugosa."
+                    </p>
+                    <div class="font-label-bold text-primary flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm">person</span> Carlos M.
+                    </div>
+                </div>
+                <!-- Review Card 2 -->
+                <div class="bg-surface-container p-8 rounded border border-outline-variant/20 shadow-lg hover:border-primary-container/30 transition-all duration-300 hover:-translate-y-1">
+                    <div class="flex items-center gap-1 text-accent-amber mb-4">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    </div>
+                    <p class="font-body-md text-on-surface-variant italic mb-6 leading-relaxed">
+                        "Excelente atención en el local. El ambiente rústico con luces queda increíble de noche. Las papas cavernícolas con cheddar son de otro planeta."
+                    </p>
+                    <div class="font-label-bold text-primary flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm">person</span> Andrea V.
+                    </div>
+                </div>
+                <!-- Review Card 3 -->
+                <div class="bg-surface-container p-8 rounded border border-outline-variant/20 shadow-lg hover:border-primary-container/30 transition-all duration-300 hover:-translate-y-1">
+                    <div class="flex items-center gap-1 text-accent-amber mb-4">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_half</span>
+                    </div>
+                    <p class="font-body-md text-on-surface-variant italic mb-6 leading-relaxed">
+                        "El delivery llegó súper rápido y todo calientito. El empaque y la presentación impecables. La hamburguesa Velociraptor picante es espectacular."
+                    </p>
+                    <div class="font-label-bold text-primary flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm">person</span> Felipe R.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="cavernas" class="py-20 px-margin-mobile bg-surface-container-low">
+        <div class="max-w-max-width mx-auto flex flex-col lg:flex-row gap-12">
+            <div class="w-full lg:w-1/2">
+                <img alt="Nuestra Caverna" class="w-full h-96 object-cover rounded shadow-2xl border border-outline-variant/20" src="https://lh3.googleusercontent.com/aida/ADBb0ugzGQ0fl72__mrjpbNpSZHxkDtj8TUoY55wGWIw2NPdzNLP_8M__QUt-B14SNm_e8Y2UkWBji3IYMRtY5UYRDUADXo_olGA9C7u_o9j91YHK65LI8OR3rEBmzjwfWRjGqPrCTj1CT2QQHyp72tmuitPbsFafLw9zep71RA5WpMd8xClWFXbR8hoBx7iIQxSPu3J5M8yjKUFsn8pRrXkZqEZhi7E4XQbmpOX0Mz2-pJfIYIfwtWHawu1lB-N"/>
+            </div>
+            <div class="w-full lg:w-1/2 flex flex-col justify-center">
+                <h2 class="font-headline-lg text-headline-lg text-primary uppercase tracking-widest mb-6 text-center lg:text-left">NUESTRA CAVERNA</h2>
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-start gap-4">
+                        <span class="material-symbols-outlined text-primary-container text-3xl p-2 bg-surface-container rounded border border-outline-variant/10">location_on</span>
+                        <div>
+                            <h4 class="font-label-bold text-on-surface text-lg">Ubicación</h4>
+                            <p class="font-body-md text-on-surface-variant">Av. Principal 1234, Paine, Región Metropolitana, Chile</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="material-symbols-outlined text-primary-container text-3xl p-2 bg-surface-container rounded border border-outline-variant/10">schedule</span>
+                        <div>
+                            <h4 class="font-label-bold text-on-surface text-lg">Horario de Caza</h4>
+                            <p class="font-body-md text-on-surface-variant">Martes a Domingo: 12:30 - 22:30<br/>Lunes: Descansamos</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="material-symbols-outlined text-primary-container text-3xl p-2 bg-surface-container rounded border border-outline-variant/10">phone</span>
+                        <div>
+                            <h4 class="font-label-bold text-on-surface text-lg">Contacto Directo</h4>
+                            <p class="font-body-md text-on-surface-variant">+56 9 1234 5678</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface-deep border-t border-outline-variant/30 py-8 px-margin-mobile text-center text-text-secondary font-caption text-caption pb-28 md:pb-8">
+        <div class="max-w-max-width mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>© 2026 LA MANADA BURGER. Todos los derechos reservados. Paine, Chile.</div>
+            <div class="flex gap-4">
+                <a href="#inicio" class="hover:text-primary transition-colors">Inicio</a>
+                <a href="#menu" class="hover:text-primary transition-colors">Menú</a>
+                <a href="#tribu" class="hover:text-primary transition-colors">Nosotros</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Drawer (Right Side Slide-out) -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 invisible transition-all duration-300">
+        <!-- Backdrop -->
+        <div onclick="toggleCart()" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+        <!-- Drawer Body -->
+        <div class="absolute right-0 top-0 h-full w-full max-w-md bg-[#0a0a0ade] backdrop-blur-xl border-l border-outline-variant/30 shadow-2xl flex flex-col">
+            <!-- Header -->
+            <div class="flex justify-between items-center p-6 border-b border-outline-variant/20">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-3xl">shopping_bag</span>
+                    <h3 class="font-headline-md text-headline-md text-primary tracking-wider uppercase">TU BOLSA DE CAZA</h3>
+                </div>
+                <button onclick="toggleCart()" class="text-text-secondary hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </button>
+            </div>
+            
+            <!-- Item List -->
+            <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-4">
+                <!-- Dynamically populated via JS -->
+                <div class="h-full flex flex-col items-center justify-center text-center text-text-secondary">
+                    <span class="material-symbols-outlined text-6xl mb-4 text-outline/30">eco</span>
+                    <p class="font-body-lg">Tu bolsa de caza está vacía.</p>
+                    <p class="text-caption mt-1">¡Sal al catálogo y agrega alguna presa!</p>
+                </div>
+            </div>
+            
+            <!-- Summary -->
+            <div class="p-6 bg-surface-container border-t border-outline-variant/20 space-y-4">
+                <div class="flex justify-between items-center text-on-surface font-label-bold text-lg">
+                    <span>Total del Pedido</span>
+                    <span id="cart-total">$0</span>
+                </div>
+                <button onclick="openCheckout()" id="checkout-btn" class="w-full bg-primary-container text-surface-deep font-headline-md text-[20px] py-4 rounded hover:bg-accent-amber transition-all duration-300 uppercase tracking-widest disabled:opacity-50 disabled:pointer-events-none">
+                    INICIAR COMPRA
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
+        <!-- Backdrop -->
+        <div onclick="closeCheckout()" class="absolute inset-0 bg-black/75 backdrop-blur-sm"></div>
+        <!-- Modal Content -->
+        <div class="relative w-full max-w-lg bg-surface-container-low rounded border border-outline-variant/30 shadow-2xl p-6 md:p-8 z-10 text-on-surface">
+            <button onclick="closeCheckout()" class="absolute top-4 right-4 text-text-secondary hover:text-primary transition-colors">
+                <span class="material-symbols-outlined text-2xl">close</span>
+            </button>
+            <h3 class="font-headline-md text-headline-md text-primary tracking-widest uppercase mb-6 flex items-center gap-2">
+                <span class="material-symbols-outlined">assignment</span> DATOS DEL PEDIDO
+            </h3>
+            
+            <form id="checkout-form" onsubmit="submitCheckout(event)" class="space-y-5">
+                <div>
+                    <label class="block text-caption font-label-bold uppercase text-text-secondary mb-1" for="client-name">Nombre Completo</label>
+                    <input class="w-full bg-surface-container border border-outline-variant/30 focus:border-primary-container focus:ring-1 focus:ring-primary-container rounded p-3 text-on-surface text-body-md placeholder:text-text-secondary/40" id="client-name" placeholder="Ej. Juan Pérez" required type="text"/>
+                </div>
+                <div>
+                    <label class="block text-caption font-label-bold uppercase text-text-secondary mb-1">Método de Entrega</label>
+                    <div class="grid grid-cols-2 gap-4">
+                        <label class="flex items-center justify-center gap-2 bg-surface-container border border-outline-variant/20 hover:border-primary-container/50 rounded p-3 cursor-pointer select-none">
+                            <input checked class="text-primary-container focus:ring-primary-container bg-surface-deep border-outline-variant" name="delivery-method" onchange="toggleAddressField(true)" type="radio" value="Delivery"/>
+                            <span class="font-label-bold text-caption uppercase">Delivery</span>
+                        </label>
+                        <label class="flex items-center justify-center gap-2 bg-surface-container border border-outline-variant/20 hover:border-primary-container/50 rounded p-3 cursor-pointer select-none">
+                            <input class="text-primary-container focus:ring-primary-container bg-surface-deep border-outline-variant" name="delivery-method" onchange="toggleAddressField(false)" type="radio" value="Retiro"/>
+                            <span class="font-label-bold text-caption uppercase">Retiro en local</span>
+                        </label>
+                    </div>
+                </div>
+                <div id="address-container">
+                    <label class="block text-caption font-label-bold uppercase text-text-secondary mb-1" for="client-address">Dirección de Entrega</label>
+                    <input class="w-full bg-surface-container border border-outline-variant/30 focus:border-primary-container focus:ring-1 focus:ring-primary-container rounded p-3 text-on-surface text-body-md placeholder:text-text-secondary/40" id="client-address" placeholder="Ej. Av. Las Flores 321, Paine" required type="text"/>
+                </div>
+                <div>
+                    <label class="block text-caption font-label-bold uppercase text-text-secondary mb-1" for="client-notes">Notas / Instrucciones adicionales</label>
+                    <textarea class="w-full bg-surface-container border border-outline-variant/30 focus:border-primary-container focus:ring-1 focus:ring-primary-container rounded p-3 text-on-surface text-body-md placeholder:text-text-secondary/40 h-20 resize-none" id="client-notes" placeholder="Ej. Sin cebolla en la burger, por favor."></textarea>
+                </div>
+                
+                <button class="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-headline-md text-[20px] py-4 rounded transition-all duration-300 uppercase tracking-widest flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(37,211,102,0.3)] mt-6" type="submit">
+                    <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+                    </svg>
+                    ENVIAR PEDIDO A WHATSAPP
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button (Standard Quick Contact) -->
+    <a class="fixed bottom-24 right-4 md:bottom-8 md:right-8 z-40 bg-[#25D366] hover:bg-[#128C7E] text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110 active:scale-95 flex items-center justify-center border border-white/10" href="https://wa.me/56912345678" target="_blank" aria-label="Contacto directo por WhatsApp">
+        <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+        </svg>
+    </a>
+
+    <!-- Bottom Navigation (Mobile Only) -->
+    <nav class="md:hidden fixed bottom-0 w-full z-45 bg-[#0a0a0ade]/95 backdrop-blur-xl border-t border-primary/20 shadow-[0_-5px_15px_rgba(0,0,0,0.5)] pb-safe px-4 h-20 flex justify-around items-center">
+        <a href="#inicio" class="flex flex-col items-center justify-center text-primary rounded-full py-1 px-4 cursor-pointer active:scale-90 transition-all duration-200">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+            <span class="font-label-bold text-[10px] mt-1">Inicio</span>
+        </a>
+        <a href="#menu" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary cursor-pointer rounded-lg p-2 transition-colors">
+            <span class="material-symbols-outlined">restaurant_menu</span>
+            <span class="font-label-bold text-[10px] mt-1">Presas</span>
+        </a>
+        <a href="#tribu" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary cursor-pointer rounded-lg p-2 transition-colors">
+            <span class="material-symbols-outlined">groups</span>
+            <span class="font-label-bold text-[10px] mt-1">La Tribu</span>
+        </a>
+        <a href="#cavernas" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary cursor-pointer rounded-lg p-2 transition-colors">
+            <span class="material-symbols-outlined">location_on</span>
+            <span class="font-label-bold text-[10px] mt-1">Cavernas</span>
+        </a>
+    </nav>
+
+    <!-- Interactive JS System -->
+    <script>
+        // Menu Data
+        const menuItems = [
+            {
+                id: "trex",
+                name: "T-Rex Burger",
+                category: "burgers",
+                price: 8990,
+                description: "Triple carne artesanal de 150g, triple cheddar, tocino ahumado crujiente, cebolla caramelizada y salsa BBQ secreta.",
+                image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80",
+                badge: "La Más Bestia"
+            },
+            {
+                id: "raptor",
+                name: "Velociraptor Burger",
+                category: "burgers",
+                price: 7490,
+                description: "Doble carne premium de 150g, doble queso cheddar, aros de cebolla crujientes, jalapeños picantes y salsa mayo-cayena.",
+                image: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=500&q=80",
+                badge: "Picante"
+            },
+            {
+                id: "tricer",
+                name: "Triceratops Veggie",
+                category: "burgers",
+                price: 6990,
+                description: "Medallón casero de garbanzos, quinoa y hierbas, queso cheddar vegano fundido, palta fresca, lechuga y alioli de ajo.",
+                image: "https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?auto=format&fit=crop&w=500&q=80",
+                badge: "Veggie"
+            },
+            {
+                id: "ptero",
+                name: "Pterodáctilo Crispy",
+                category: "burgers",
+                price: 6990,
+                description: "Pechuga de pollo súper crujiente marinada en buttermilk, doble queso mozzarella, coleslaw fresco y salsa honey mustard.",
+                image: "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=500&q=80",
+                badge: "Crispy"
+            },
+            {
+                id: "papas-cav",
+                name: "Papas Cavernícolas",
+                category: "sides",
+                price: 4490,
+                description: "Gran porción de papas rústicas con piel, bañadas en salsa de queso cheddar fundido y espolvoreadas con tocino picado.",
+                image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=500&q=80",
+                badge: "Favorito"
+            },
+            {
+                id: "aros-onion",
+                name: "Aros de Cebolla",
+                category: "sides",
+                price: 3490,
+                description: "Crujientes aros de cebolla rebozados y fritos, perfectos para acompañar con nuestra salsa BBQ casera.",
+                image: "https://images.unsplash.com/photo-1639024471283-2bc7b3c6a267?auto=format&fit=crop&w=500&q=80",
+                badge: "Crujiente"
+            },
+            {
+                id: "nectar",
+                name: "Néctar del Pantano",
+                category: "drinks",
+                price: 2490,
+                description: "Limonada casera helada con menta fresca licuada y un toque de jengibre. Refrescante e ideal para la digestión.",
+                image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=500&q=80",
+                badge: "Natural"
+            },
+            {
+                id: "bebida",
+                name: "Bebida Express 350ml",
+                category: "drinks",
+                price: 1500,
+                description: "Variedad de bebidas en lata bien heladas a elección (Coca-Cola, Sprite, Fanta, Zero).",
+                image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=500&q=80",
+                badge: "Helada"
+            },
+            {
+                id: "combo-tribu",
+                name: "Combo La Tribu",
+                category: "combos",
+                price: 13990,
+                description: "T-Rex Burger + Papas Cavernícolas Individuales + Néctar del Pantano o Bebida a elección. Ahorra cazando en pack.",
+                image: "https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=500&q=80",
+                badge: "Pack Ahorro"
+            },
+            {
+                id: "combo-raptor",
+                name: "Combo Raptor",
+                category: "combos",
+                price: 10990,
+                description: "Velociraptor Burger + Aros de cebolla individuales + Bebida en lata a elección. Perfecto para el almuerzo.",
+                image: "https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=500&q=80",
+                badge: "Recomendado"
+            }
+        ];
+
+        // Shopping Cart State
+        let cart = [];
+
+        // Render Menu Grid
+        function renderMenu(category = 'all') {
+            const grid = document.getElementById('menu-grid');
+            grid.innerHTML = '';
+            
+            const filtered = category === 'all' 
+                ? menuItems 
+                : menuItems.filter(item => item.category === category);
+                
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "group bg-surface-container rounded border border-outline-variant/20 shadow-lg hover:border-primary-container/30 transition-all duration-300 flex flex-col justify-between overflow-hidden hover:-translate-y-1 relative";
+                
+                // Badge
+                const badgeHtml = item.badge 
+                    ? `<span class="absolute top-3 left-3 bg-primary-container text-surface-deep font-label-bold text-[11px] px-3 py-1 rounded shadow-md tracking-wider uppercase z-20">${item.badge}</span>`
+                    : '';
+                
+                card.innerHTML = `
+                    ${badgeHtml}
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img alt="${item.name}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="${item.image}"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-headline-md text-headline-md text-text-primary uppercase tracking-wider mb-2">${item.name}</h3>
+                            <p class="font-body-md text-text-secondary text-sm leading-relaxed mb-4">${item.description}</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-auto">
+                            <span class="font-headline-md text-[22px] text-primary-fixed-dim">$${item.price.toLocaleString('es-CL')}</span>
+                            <button onclick="addToCart('${item.id}')" class="bg-primary-container hover:bg-accent-amber text-[#0a0a0a] font-label-bold text-caption uppercase px-4 py-2.5 rounded transition-all duration-300 flex items-center gap-1.5 active:scale-95">
+                                <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span> AGREGAR
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Filter Categories
+        function filterCategory(category) {
+            // Update active button state
+            const buttons = document.querySelectorAll('.cat-btn');
+            buttons.forEach(btn => {
+                btn.className = "cat-btn bg-surface-container text-primary border border-outline-variant/30 hover:border-primary-container/50 font-headline-md text-[18px] px-6 py-2.5 rounded transition-all duration-300 tracking-wider uppercase";
+            });
+            
+            const activeBtn = document.getElementById(`btn-cat-${category}`);
+            if (activeBtn) {
+                activeBtn.className = "cat-btn bg-primary-container text-surface-deep font-headline-md text-[18px] px-6 py-2.5 rounded transition-all duration-300 tracking-wider uppercase";
+            }
+            
+            renderMenu(category);
+        }
+
+        // Cart Functions
+        function addToCart(itemId) {
+            const item = menuItems.find(i => i.id === itemId);
+            if (!item) return;
+            
+            const existing = cart.find(cartItem => cartItem.id === itemId);
+            if (existing) {
+                existing.quantity++;
+            } else {
+                cart.push({ ...item, quantity: 1 });
+            }
+            
+            updateCart();
+            animateCartBadges();
+        }
+
+        function updateQuantity(itemId, change) {
+            const index = cart.findIndex(item => item.id === itemId);
+            if (index === -1) return;
+            
+            cart[index].quantity += change;
+            if (cart[index].quantity <= 0) {
+                cart.splice(index, 1);
+            }
+            
+            updateCart();
+        }
+
+        function removeFromCart(itemId) {
+            cart = cart.filter(item => item.id !== itemId);
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+            const cartBadgeDesktop = document.getElementById('cart-badge-desktop');
+            const cartBadgeMobile = document.getElementById('cart-badge-mobile');
+            const checkoutBtn = document.getElementById('checkout-btn');
+            
+            let total = 0;
+            let totalItems = 0;
+            
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = `
+                    <div class="h-full flex flex-col items-center justify-center text-center text-text-secondary">
+                        <span class="material-symbols-outlined text-6xl mb-4 text-outline/30">eco</span>
+                        <p class="font-body-lg">Tu bolsa de caza está vacía.</p>
+                        <p class="text-caption mt-1">¡Sal al catálogo y agrega alguna presa!</p>
+                    </div>
+                `;
+                checkoutBtn.disabled = true;
+            } else {
+                checkoutBtn.disabled = false;
+                cartItemsContainer.innerHTML = '';
+                
+                cart.forEach(item => {
+                    total += item.price * item.quantity;
+                    totalItems += item.quantity;
+                    
+                    const itemElement = document.createElement('div');
+                    itemElement.className = "flex items-center gap-4 bg-surface-container p-4 rounded border border-outline-variant/15 justify-between";
+                    itemElement.innerHTML = `
+                        <div class="flex items-center gap-3">
+                            <img alt="${item.name}" class="w-16 h-16 object-cover rounded border border-outline-variant/20" src="${item.image}"/>
+                            <div>
+                                <h4 class="font-headline-md text-[18px] text-text-primary uppercase tracking-wider">${item.name}</h4>
+                                <p class="text-primary-fixed-dim font-bold text-sm">$${(item.price * item.quantity).toLocaleString('es-CL')}</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="flex items-center bg-surface-deep rounded border border-outline-variant/30">
+                                <button onclick="updateQuantity('${item.id}', -1)" class="w-8 h-8 flex items-center justify-center text-primary-container hover:text-accent-amber font-bold text-lg">-</button>
+                                <span class="w-6 text-center text-text-primary text-sm font-label-bold">${item.quantity}</span>
+                                <button onclick="updateQuantity('${item.id}', 1)" class="w-8 h-8 flex items-center justify-center text-primary-container hover:text-accent-amber font-bold text-lg">+</button>
+                            </div>
+                            <button onclick="removeFromCart('${item.id}')" class="text-error hover:text-red-400 transition-colors">
+                                <span class="material-symbols-outlined text-xl">delete</span>
+                            </button>
+                        </div>
+                    `;
+                    cartItemsContainer.appendChild(itemElement);
+                });
+            }
+            
+            cartTotal.innerText = `$${total.toLocaleString('es-CL')}`;
+            
+            // Update Badges
+            if (totalItems > 0) {
+                cartBadgeDesktop.innerText = totalItems;
+                cartBadgeDesktop.classList.remove('scale-0');
+                cartBadgeDesktop.classList.add('scale-100');
+                
+                cartBadgeMobile.innerText = totalItems;
+                cartBadgeMobile.classList.remove('scale-0');
+                cartBadgeMobile.classList.add('scale-100');
+            } else {
+                cartBadgeDesktop.classList.add('scale-0');
+                cartBadgeDesktop.classList.remove('scale-100');
+                
+                cartBadgeMobile.classList.add('scale-0');
+                cartBadgeMobile.classList.remove('scale-100');
+            }
+        }
+
+        // Animate Cart Badge on Add
+        function animateCartBadges() {
+            const badges = [document.getElementById('cart-badge-desktop'), document.getElementById('cart-badge-mobile')];
+            badges.forEach(badge => {
+                badge.classList.add('animate-bounce');
+                setTimeout(() => {
+                    badge.classList.remove('animate-bounce');
+                }, 1000);
+            });
+        }
+
+        // Drawer Navigation Toggle
+        function toggleCart() {
+            const drawer = document.getElementById('cart-drawer');
+            if (drawer.classList.contains('invisible')) {
+                drawer.classList.remove('invisible');
+                drawer.querySelector('.absolute.right-0').classList.remove('translate-x-full');
+            } else {
+                drawer.querySelector('.absolute.right-0').classList.add('translate-x-full');
+                setTimeout(() => {
+                    drawer.classList.add('invisible');
+                }, 300);
+            }
+        }
+
+        // Checkout Toggle & Methods
+        function openCheckout() {
+            toggleCart(); // Close Cart
+            document.getElementById('checkout-modal').classList.remove('hidden');
+        }
+
+        function closeCheckout() {
+            document.getElementById('checkout-modal').classList.add('hidden');
+        }
+
+        function toggleAddressField(isDelivery) {
+            const container = document.getElementById('address-container');
+            const input = document.getElementById('client-address');
+            if (isDelivery) {
+                container.classList.remove('hidden');
+                input.required = true;
+            } else {
+                container.classList.add('hidden');
+                input.required = false;
+                input.value = '';
+            }
+        }
+
+        // Checkout Submit and WhatsApp Redirect
+        function submitCheckout(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('client-name').value;
+            const deliveryMethod = document.querySelector('input[name="delivery-method"]:checked').value;
+            const address = document.getElementById('client-address').value;
+            const notes = document.getElementById('client-notes').value;
+            
+            if (cart.length === 0) return;
+            
+            // Format order summary message
+            let message = `🦖 *¡HOLA LA MANADA!* 🦖\n`;
+            message += `Me gustaría hacer un pedido para *${deliveryMethod.toUpperCase()}*:\n\n`;
+            message += `*Detalle del Pedido:*\n`;
+            
+            let total = 0;
+            cart.forEach(item => {
+                message += `• ${item.quantity}x ${item.name} - $${(item.price * item.quantity).toLocaleString('es-CL')}\n`;
+                total += item.price * item.quantity;
+            });
+            
+            message += `\n-----------------------------\n`;
+            message += `*Total: $${total.toLocaleString('es-CL')}*\n\n`;
+            message += `*Datos del Cliente:*\n`;
+            message += `• Nombre: ${name}\n`;
+            if (deliveryMethod === 'Delivery') {
+                message += `• Dirección: ${address}\n`;
+            }
+            if (notes.trim() !== '') {
+                message += `• Notas: ${notes}\n`;
+            }
+            message += `\n¡Muchas gracias!`;
+            
+            // Encode URI
+            const encodedText = encodeURIComponent(message);
+            // Replace with shop's real WhatsApp number (e.g. +56912345678)
+            const whatsappUrl = `https://wa.me/56912345678?text=${encodedText}`;
+            
+            // Redirect
+            window.open(whatsappUrl, '_blank');
+            
+            // Reset Cart
+            cart = [];
+            updateCart();
+            closeCheckout();
+        }
+
+        // Initialize Menu Catalog
+        window.onload = function() {
+            renderMenu('all');
+            updateCart();
+        }
+    </script>
+</body>
+</html>
