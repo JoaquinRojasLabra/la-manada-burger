@@ -110,6 +110,7 @@
                         "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
                         "headline-lg": ["40px", { lineHeight: "44px", letterSpacing: "0.02em", fontWeight: "400" }],
                         "label-bold": ["14px", { lineHeight: "20px", fontWeight: "700" }],
+                        "headline-xl-mobile": ["40px", { lineHeight: "40px", letterSpacing: "0.02em", fontWeight: "400" }],
                         "headline-xl": ["64px", { lineHeight: "60px", letterSpacing: "0.02em", fontWeight: "400" }]
                     }
                 }
@@ -189,17 +190,17 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="relative h-screen min-h-[650px] flex items-center justify-center pt-16 parallax" style="background-image: url('https://lh3.googleusercontent.com/aida/ADBb0uiVbnVmeJP8vPhk1PgtaIwZ-VqmigeBYsR4o2BzYaIJRxcXiB2PLf5JA7g-vQrUa-Drk5bUrT5-NOsVw9bI9YjNrYgJ4gH9BTYhJvb8dkZ1B-5TgNBDsiuVnhoCRS4d6VtjjVbb7A49beoz47z0wBGHbRbYsMgg6CPnDwyIeJwjiEd6lBIhFpLoqLpqHg3As2FKvakY_jBRcieN2unSwWPKW91CAA6w5dx-NK5hIYZGBIWUBwRVPP-Bh-_b');">
+    <section id="inicio" class="relative h-screen min-h-[650px] flex items-center justify-center pt-16 md:pt-0 parallax pb-20 md:pb-0" style="background-image: url('https://lh3.googleusercontent.com/aida/ADBb0uiVbnVmeJP8vPhk1PgtaIwZ-VqmigeBYsR4o2BzYaIJRxcXiB2PLf5JA7g-vQrUa-Drk5bUrT5-NOsVw9bI9YjNrYgJ4gH9BTYhJvb8dkZ1B-5TgNBDsiuVnhoCRS4d6VtjjVbb7A49beoz47z0wBGHbRbYsMgg6CPnDwyIeJwjiEd6lBIhFpLoqLpqHg3As2FKvakY_jBRcieN2unSwWPKW91CAA6w5dx-NK5hIYZGBIWUBwRVPP-Bh-_b');">
         <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[#0a0a0a]"></div>
         <div class="relative z-10 flex flex-col items-center justify-center text-center px-margin-mobile max-w-3xl mx-auto mt-12 md:mt-0">
             <img alt="La Manada Logo" class="w-40 h-40 md:w-48 md:h-48 mb-8 rounded-full shadow-[0_0_40px_rgba(240,165,0,0.4)] border-4 border-primary-container/40 animate-float" src="https://lh3.googleusercontent.com/aida/ADBb0uh7okVlMEZHN6px1NB8dDGg3ga_Uvqd8VefhuGNAAnm4lR0TxOx4gUULXSHlMGGoIp2UhbqIR8prodrJJxst4dw1xg6lmXBaY3Vs-WnlNN7pTgF7o8qudqYfcWC_yxXkvOo-2joD5Ex6WaYwOqWlN13tDegpY8H0oAR0SVCv4oAJ1hFXpdihFBD-ZNBKKNu0sOKM_1fISGQsS7wMPPzauwwOs7rUAMo0QhPCbXFtJv6rhXQpN9T3FKVFl11"/>
-            <h1 class="font-headline-xl text-headline-xl md:text-[80px] md:leading-[80px] text-text-primary uppercase mb-6 text-shadow tracking-wide leading-tight">
+            <h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl md:text-[80px] md:leading-[80px] text-text-primary uppercase mb-6 text-shadow tracking-wide leading-tight">
                 HAMBURGUESAS PARA UN VERDADERO CAVERNÍCOLA
             </h1>
             <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl mx-auto">
                 El sabor de la era jurásica ha despertado. Únete a la tribu y sacia tu instinto más salvaje en Paine.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-4 justify-center">
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-4 w-full sm:w-auto mt-4 md:mt-6 justify-center">
                 <a href="#menu" class="bg-primary-container hover:bg-accent-amber text-[#0a0a0a] font-headline-md text-headline-md px-12 py-4 rounded transition-all duration-300 hover:shadow-[0_0_25px_rgba(240,165,0,0.5)] hover:-translate-y-1 w-full sm:w-auto uppercase flex items-center justify-center gap-2">
                     <span class="material-symbols-outlined font-bold">local_fire_department</span> CAZAR AHORA
                 </a>
@@ -211,13 +212,13 @@
     </section>
 
     <!-- Social Proof Bar -->
-    <section class="bg-surface-elevated border-y border-outline-variant/30 py-8 px-margin-mobile relative overflow-hidden">
+    <section class="bg-surface-elevated border-y border-outline-variant/30 py-6 md:py-8 px-margin-mobile relative overflow-hidden">
         <div class="absolute -right-10 -top-10 opacity-5 rotate-45">
             <span class="material-symbols-outlined text-[120px] text-primary">cruelty_free</span>
         </div>
         <div class="max-w-max-width mx-auto flex flex-col items-center gap-4">
             <h3 class="font-headline-md text-headline-md text-primary tracking-widest uppercase mb-1">CAVERNÍCOLAS SATISFECHOS</h3>
-            <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-text-secondary font-caption text-caption uppercase tracking-wider w-full">
+            <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 text-text-secondary font-caption text-caption uppercase tracking-wider w-full">
                 <div class="flex items-center gap-2 bg-surface-container-high px-5 py-2.5 rounded border border-outline-variant/20 hover:border-primary-container/30 transition-all duration-300">
                     <span class="text-accent-amber text-lg">★</span> 
                     <span class="font-label-bold text-on-surface">4.6 EN GOOGLE MAPS</span>
@@ -235,7 +236,7 @@
     </section>
 
     <!-- Interactive Menu Section -->
-    <section id="menu" class="py-20 px-margin-mobile bg-[#0a0a0a] relative z-10 border-b border-outline-variant/10">
+    <section id="menu" class="py-20 pb-24 md:pb-20 px-margin-mobile bg-[#0a0a0a] relative z-10 border-b border-outline-variant/10">
         <div class="max-w-max-width mx-auto">
             <div class="text-center mb-12">
                 <h2 class="font-headline-lg text-headline-lg text-primary uppercase tracking-widest">NUESTRAS PRESAS (MENÚ)</h2>
@@ -260,7 +261,7 @@
     </section>
 
     <!-- Meet the Tribe Section -->
-    <section id="tribu" class="py-20 px-margin-mobile bg-surface-container-low relative overflow-hidden border-b border-outline-variant/10">
+    <section id="tribu" class="py-20 pb-24 md:pb-20 px-margin-mobile bg-surface-container-low relative overflow-hidden border-b border-outline-variant/10">
         <div class="max-w-max-width mx-auto flex flex-col lg:flex-row items-center gap-12 relative z-10">
             <div class="w-full lg:w-1/2 flex justify-center">
                 <div class="relative group">
@@ -299,7 +300,7 @@
     </section>
 
     <!-- Reviews Section -->
-    <section class="py-20 px-margin-mobile bg-surface-deep border-b border-outline-variant/10">
+    <section class="py-20 pb-24 md:pb-20 px-margin-mobile bg-surface-deep border-b border-outline-variant/10">
         <div class="max-w-max-width mx-auto">
             <div class="text-center mb-12">
                 <h2 class="font-headline-lg text-headline-lg text-primary uppercase tracking-widest">RUGIDOS DE LA TRIBU</h2>
@@ -360,7 +361,7 @@
     </section>
 
     <!-- Location Section -->
-    <section id="cavernas" class="py-20 px-margin-mobile bg-surface-container-low">
+    <section id="cavernas" class="py-20 pb-24 md:pb-20 px-margin-mobile bg-surface-container-low">
         <div class="max-w-max-width mx-auto flex flex-col lg:flex-row gap-12">
             <div class="w-full lg:w-1/2">
                 <img alt="Nuestra Caverna" class="w-full h-96 object-cover rounded shadow-2xl border border-outline-variant/20" src="https://lh3.googleusercontent.com/aida/ADBb0ugzGQ0fl72__mrjpbNpSZHxkDtj8TUoY55wGWIw2NPdzNLP_8M__QUt-B14SNm_e8Y2UkWBji3IYMRtY5UYRDUADXo_olGA9C7u_o9j91YHK65LI8OR3rEBmzjwfWRjGqPrCTj1CT2QQHyp72tmuitPbsFafLw9zep71RA5WpMd8xClWFXbR8hoBx7iIQxSPu3J5M8yjKUFsn8pRrXkZqEZhi7E4XQbmpOX0Mz2-pJfIYIfwtWHawu1lB-N"/>
